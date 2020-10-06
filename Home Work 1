@@ -1,0 +1,57 @@
+class Animals:
+    def __init__(self, name, weight, sound, eat='Кормить'):
+       self.name = name
+       self.weight = weight
+       self.sound = sound
+       self.eat = eat
+
+    def __str__(self):
+        return f'{self.name} - вес {self.weight} кг, голос: {self.sound}, {self.eat}'
+
+    def go_milk(self):
+        return 'Доить - ' + self.name
+
+    def eggs_collect(self):
+        return 'Собирать Яйца - ' + self.name
+
+    def cut_animals(self):
+        return 'Стричь - ' + self.name
+
+gose = Animals("Серый Гусь", 2, "Га-Га")
+print(gose.eggs_collect())
+gose_two = Animals("Белый Гусь", 3, "Га-Га")
+print(gose_two.eggs_collect())
+chiken = Animals("Курица Ко-Ко", 1, "Кукарику")
+print(chiken.eggs_collect())
+chiken_two = Animals("Курица Кукареку", 1, "Кукарику")
+print(chiken_two.eggs_collect())
+duck =Animals("Утка Кряква", 2, "Кря-Кря")
+print(duck.eggs_collect())
+cow = Animals("Корова Манькa", 240, "Му-Му")
+print(cow.go_milk())
+goat = Animals("Коза Рога", 25, "Ме-Ме")
+print(goat.go_milk())
+goat_two = Animals("Коза Копыта", 25, "Ме-Ме")
+print(goat_two.go_milk())
+sheep = Animals("Овца Барашек", 30, "Бе-Бе")
+print(sheep.cut_animals())
+sheep_two = Animals("Овца Кудрявый", 30, "Бе-Бе")
+print(sheep_two.cut_animals())
+
+farm = [
+  Animals("Серый Гусь", 2, "Га-Га"),
+  Animals("Белый Гусь", 3, "Га-Га"),
+  Animals("Курица Ко-Ко", 1, "Кукарику"),
+  Animals("Курица Кукареку", 1, "Кукарику"),
+  Animals("Утка Кряква", 2, "Кря-Кря"),
+  Animals("Корова Манькa", 240, "Му-Му"),
+  Animals("Коза Рога", 25, "Ме-Ме"),
+  Animals("Коза Копыта", 25, "Ме-Ме"),
+  Animals("Овца Барашек", 30, "Бе-Бе"),
+  Animals("Овца Кудрявый", 30, "Бе-Бе")
+]
+
+print(*farm, sep='\n')
+
+print(f'Общий вес {sum([i.weight for i in farm])} кг.')
+print(f'Максимальный вес {max([i.weight for i in farm])} кг.')
