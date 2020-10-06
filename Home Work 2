@@ -1,0 +1,43 @@
+class Track:
+    def __init__(self, name, duration):
+        self.name = name
+        self.duration = duration
+
+    def show(self):
+        print(f' Track: {self.name} - {self.duration} min.')
+
+
+class Album:
+    def __init__(self, name_album, group, track):
+        self.name_album = name_album
+        self.group = group
+        self.track = track
+
+
+    def get_tracks(self):
+        print(', '.join(self.track))
+
+    def add_track(self, track, duration):
+        self.track.update({track: duration})
+        print(', '.join(self.track))
+
+    def get_duration(self):
+        print(f'Длительность Альбома {self.name_album}: {sum(self.track.values())} min')
+
+
+
+
+
+
+
+tracks = {'Burn it Down': 3, 'One More Light': 4, 'In the End': 3 }
+lp = Album('НЕТОЛОГИЯ', 'Python', tracks)
+lp.get_tracks()
+lp.add_track('py-34', 69)
+lp.get_duration()
+
+tracks_two = {'New Divide': 2, 'Numb/Encore': 4}
+nt = Album('НЕТОЛОГИЯ', 'Python', tracks_two)
+nt.get_tracks()
+nt.add_track('py-35', 45)
+nt.get_duration()
