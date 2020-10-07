@@ -1,0 +1,94 @@
+class Gose:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+    def eggs_collect(self):
+        return 'Собирать Яйца - ' + self.name + ', Вес:' + str(self.weight) + ', Голос: ' + self.vote
+
+class Cow:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+    def go_milk(self):
+        return 'Доить - ' + self.name + ', Вес:' + str(self.weight) + ', Голос: ' + self.vote
+
+class Sheep:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+    def cut_animals(self):
+        return 'Стричь - ' + self.name + ', Вес:' + str(self.weight) + ', Голос: ' + self.vote
+
+class Chiken:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+    def eggs_collect(self):
+        return 'Собирать Яйца - ' + self.name + ', Вес:' + str(self.weight) + ', Голос: ' + self.vote
+
+class Goat:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+    def go_milk(self):
+        return 'Доить - ' + self.name + ', Вес:' + str(self.weight) + ', Голос: ' + self.vote
+
+class Duck:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+    def eggs_collect(self):
+        return 'Собирать Яйца - ' + self.name + ', Вес:' + str(self.weight) + ', Голос: ' + self.vote
+
+
+gose = Gose("Серый Гусь", 2, "Га-Га")
+print(gose.eggs_collect())
+gose_one = Gose("Белый Гусь", 3, "Га-Га")
+print(gose_one.eggs_collect())
+chiken = Chiken("Курица Ко-Ко", 1, "Кукарику")
+print(chiken.eggs_collect())
+chiken_one = Chiken("Курица Кукареку", 1, "Кукарику")
+print(chiken_one.eggs_collect())
+duck = Duck("Утка Кряква", 2, "Кря-Кря")
+print(duck.eggs_collect())
+cow = Cow("Корова Манькa", 240, "Му-Му")
+print(cow.go_milk())
+goat = Goat("Коза Рога", 25, "Ме-Ме")
+print(goat.go_milk())
+goat_one = Goat("Коза Копыта", 25, "Ме-Ме")
+print(goat_one.go_milk())
+sheep = Sheep("Овца Барашек", 30, "Бе-Бе")
+print(sheep.cut_animals())
+sheep_one = Sheep("Овца Кудрявый", 30, "Бе-Бе")
+print(sheep_one.cut_animals())
+
+
+
+farm = [
+  Gose("Серый Гусь", 2, "Га-Га"),
+  Gose("Белый Гусь", 3, "Га-Га"),
+  Chiken("Курица Ко-Ко", 1, "Кукарику"),
+  Chiken("Курица Кукареку", 1, "Кукарику"),
+  Duck("Утка Кряква", 2, "Кря-Кря"),
+  Cow("Корова Манькa", 240, "Му-Му"),
+  Goat("Коза Рога", 25, "Ме-Ме"),
+  Goat("Коза Копыта", 25, "Ме-Ме"),
+  Sheep("Овца Барашек", 30, "Бе-Бе"),
+  Sheep("Овца Кудрявый", 30, "Бе-Бе")
+]
+
+
+print(f'Общий вес {sum([i.weight for i in farm])} кг.')
+print(f'Максимальный вес {max([i.weight for i in farm])} кг.')
