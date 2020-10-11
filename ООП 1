@@ -1,0 +1,82 @@
+class Gose:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+
+class Cow:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+class Sheep:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+
+class Chiken:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+
+class Goat:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+
+class Duck:
+    def __init__(self, name='', weight=0, vote=''):
+        self.name = name
+        self.weight = weight
+        self.vote = vote
+
+
+class Milk(Cow, Goat):
+     def go_milk(self):
+         for item in milk:
+             print('Доить - ' + item.name + ', Вес:' + str(item.weight) + ', Голос: ' + item.vote)
+
+class Eggs(Duck, Chiken, Gose):
+
+    def eggs_collect(self):
+        for item in eggs:
+            print('Собирать Яйца - ' + item.name + ', Вес:' + str(item.weight) + ', Голос: ' + item.vote)
+
+class Cut(Sheep):
+    def cut_animals(self):
+        for item in cut:
+            print('Стричь - ' + item.name + ', Вес:' + str(item.weight) + ', Голос: ' + item.vote)
+
+
+
+
+eggs = [
+  Eggs("Серый Гусь", 2, "Га-Га"),
+  Eggs("Белый Гусь", 3, "Га-Га"),
+  Eggs("Курица Ко-Ко", 1, "Кукарику"),
+  Eggs("Курица Кукареку", 1, "Кукарику"),
+  Eggs("Утка Кряква", 2, "Кря-Кря"),
+]
+
+cut = [
+  Cut("Овца Барашек", 30, "Бе-Бе"),
+  Cut("Овца Кудрявый", 30, "Бе-Бе")
+]
+
+milk = [
+    Milk("Корова Манькa", 240, "Му-Му"),
+    Milk("Коза Рога", 25, "Ме-Ме"),
+    Milk("Коза Копыта", 25, "Ме-Ме")
+]
+Cut.cut_animals(cut)
+Milk.go_milk(milk)
+Eggs.eggs_collect(eggs)
+
