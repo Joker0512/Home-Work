@@ -1,0 +1,32 @@
+book = []
+def gg(line, a):
+    for txt in line:
+        txt = txt.split('\n')
+    ing_list = {
+            'name': a,
+            'long': int(len(txt)),
+            'text': txt
+    }
+    book.append(ing_list)
+
+with open('1.txt', encoding='utf-8') as file1:
+    line_1 = file1.read()
+    line_1 = line_1.split('\n\n')
+with open('2.txt', encoding='utf-8') as file2:
+    line_2 = file2.read()
+    line_2 = line_2.split('\n\n')
+with open('3.txt', encoding='utf-8') as file3:
+    line_3 = file3.read()
+    line_3 = line_3.split('\n\n')
+
+gg(line_1, '1.txt')
+gg(line_2, '2.txt')
+gg(line_3, '3.txt')
+
+for a in book:
+    with open('4.txt', 'a', encoding='UTF=8') as f:
+      f.write(a['name'] + "\n")
+      f.write(str(a['long']) + "\n")
+    for b in a['text']:
+        with open('4.txt', 'a', encoding='UTF=8') as f:
+            f.write(b + "\n")
